@@ -1,5 +1,5 @@
 package timer;
 
 public enum Status {
-        CANCELED, RUNNING, STOPPED
+        CANCELED, TIME_SELECTED, RUNNING, PAUSED
 }
