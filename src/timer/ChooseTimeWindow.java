@@ -8,8 +8,6 @@ import javax.swing.JComboBox;
 
 import java.awt.Dimension;
 import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class ChooseTimeWindow extends JFrame {
     public ChooseTimeWindow() {
