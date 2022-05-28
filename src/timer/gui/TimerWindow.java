@@ -1,11 +1,10 @@
-package timer;
+package timer.gui;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.Box;
+import timer.RunTimer;
+import timer.mechanics.TimerMechanics;
+import timer.misc.Constants;
 
+import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -40,7 +39,7 @@ public class TimerWindow extends JFrame {
         chooseTime.addActionListener(actionEvent -> {
             if (timer.isCanceled()) {
                 setVisible(false);
-                new ChooseTimeWindow();
+                SwingUtilities.invokeLater(new RunTimer());
             }
         });
 

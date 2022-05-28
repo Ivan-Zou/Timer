@@ -1,11 +1,12 @@
-package timer;
+package timer.gui;
+
+import timer.misc.Constants;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-
 import java.awt.Dimension;
 import java.awt.BorderLayout;
 

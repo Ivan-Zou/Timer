@@ -1,4 +1,6 @@
-package timer;
+package timer.classes;
+
+import timer.misc.Constants;
 
 public class TimerImpl {
     private int startTime, totalTime;

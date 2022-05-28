@@ -1,4 +1,8 @@
-package timer;
+package timer.mechanics;
+
+import timer.classes.TimerImpl;
+import timer.misc.Constants;
+import timer.misc.Status;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -52,6 +56,14 @@ public class TimerMechanics {
         return timerImpl.finished();
     }
 
+    public void setButtonText() {
+        String chooseTimeStr = timeSelected() ? Constants.LONG_BLANK_STRING : "Choose Time";
+        chooseTime.setText(chooseTimeStr);
+        String startStr = timeSelected() ? "Start" : Constants.SHORT_BLANK_STRING;
+        start.setText(startStr);
+        cancel.setText(Constants.SHORT_BLANK_STRING);
+    }
+
     public boolean isRunning() {
         return status == Status.RUNNING;
     }
@@ -82,14 +94,6 @@ public class TimerMechanics {
         timerImpl.setTotalTime(hours, minutes, seconds);
         time.setText(timerImpl.getPausedTime());
         status = timeSelected() ? Status.TIME_SELECTED : Status.CANCELED;
-    }
-
-    public void setButtonText() {
-        String chooseTimeStr = timeSelected() ? Constants.LONG_BLANK_STRING : "Choose Time";
-        chooseTime.setText(chooseTimeStr);
-        String startStr = timeSelected() ? "Start" : Constants.SHORT_BLANK_STRING;
-        start.setText(startStr);
-        cancel.setText(Constants.SHORT_BLANK_STRING);
     }
 
     public boolean timeSelected() {

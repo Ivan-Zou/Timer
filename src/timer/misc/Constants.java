@@ -1,4 +1,4 @@
-package timer;
+package timer.misc;
 
 public class Constants {
     public static final int WINDOW_LOCATION_X = 400;
