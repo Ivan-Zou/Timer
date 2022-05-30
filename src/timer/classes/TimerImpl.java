@@ -22,17 +22,25 @@ public class TimerImpl {
                 (seconds);
     }
 
-    public boolean finished() {
-        return finished || totalTime <= 0;
-    }
-
     public void start() {
         startTime = nanoToUnit(System.nanoTime());
+    }
+
+    private static int nanoToUnit(long nano) {
+        return (int) (nano / Math.pow(10, 9));
     }
 
     public void pause() {
         int pausedTime = nanoToUnit(System.nanoTime());
         totalTime -= pausedTime - startTime;
+    }
+
+    public boolean finished() {
+        return finished || totalTime <= 0;
+    }
+
+    public String getCurrentTime() {
+        return formatTime(getCurrentCountdown());
     }
 
     private int getCurrentCountdown() {
@@ -41,16 +49,8 @@ public class TimerImpl {
         return countdown;
     }
 
-    private static int nanoToUnit(long nano) {
-        return (int) (nano / Math.pow(10, 9));
-    }
-
     public String getPausedTime() {
         return formatTime(totalTime);
-    }
-
-    public String getCurrentTime() {
-        return formatTime(getCurrentCountdown());
     }
 
     private String formatTime(int time) {
