@@ -61,7 +61,9 @@ public class ChooseTimeWindow extends JFrame {
             new TimerWindow(hours, minutes, seconds);
             setVisible(false);
         });
+
         buttonPanel.add(ok);
+
         add(buttonPanel, BorderLayout.SOUTH);
 
         setPreferredSize(new Dimension(Constants.POPUP_WIDTH, Constants.POPUP_HEIGHT));
