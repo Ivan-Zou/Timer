@@ -20,15 +20,14 @@ public class TimerWindow extends JFrame {
         setPreferredSize(new Dimension(Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT));
 
         JPanel timePanel = new JPanel();
-        add(timePanel, BorderLayout.CENTER);
-
         JLabel time = new JLabel("00:00:00");
         time.setFont(new Font(null, Font.PLAIN, Constants.TIME_FONT_SIZE));
+
         timePanel.add(time);
 
-        JPanel controlPanel = new JPanel();
-        add(controlPanel, BorderLayout.SOUTH);
+        add(timePanel, BorderLayout.CENTER);
 
+        JPanel controlPanel = new JPanel();
         JButton chooseTime = new JButton();
         JButton startPauseResume = new JButton();
         JButton cancel = new JButton();
@@ -77,10 +76,11 @@ public class TimerWindow extends JFrame {
         controlPanel.add(Box.createRigidArea(new Dimension(Constants.SPACER_WIDTH, 0)));
         controlPanel.add(startPauseResume);
 
+        add(controlPanel, BorderLayout.SOUTH);
 
         pack();
+        setVisible(true);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
     }
 }
