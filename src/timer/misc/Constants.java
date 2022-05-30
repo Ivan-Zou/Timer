@@ -24,5 +24,5 @@ public class Constants {
     public static final String SHORT_BLANK_STRING = "           ";
     public static final String LONG_BLANK_STRING = "                     ";
 
-    public static final String AUDIO_FILE = "";
+    public static final String AUDIO_FILE = "files/sound_file.wav";
 }
