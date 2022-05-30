@@ -1,5 +1,6 @@
 package timer.mechanics;
 
+import timer.classes.Sound;
 import timer.classes.TimerImpl;
 import timer.misc.Constants;
 import timer.misc.Status;
@@ -30,6 +31,7 @@ public class TimerMechanics {
             } else if (isFinished()) {
                 setButtonText();
                 reset();
+                Sound.play();
             } else if (isRunning()) {
                 run();
             } else if (isPaused()) {
