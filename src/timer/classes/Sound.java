@@ -19,7 +19,7 @@ public class Sound {
             clip.loop(Clip.LOOP_CONTINUOUSLY);
             SwingUtilities.invokeLater(() -> {
                 JOptionPane.showMessageDialog(null, "STOP");
-                System.exit(0);
+                clip.stop();
             });
         } catch (Exception exception) {
             exception.printStackTrace();
