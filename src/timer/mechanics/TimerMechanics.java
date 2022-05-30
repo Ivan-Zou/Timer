@@ -42,16 +42,16 @@ public class TimerMechanics {
         timer.start();
     }
 
-    public boolean isCanceled() {
-        return status == Status.CANCELED;
-    }
-
     private void reset() {
         time.setText("00:00:00");
         timerImpl.reset();
         cancelStatus();
         clickedStart = false;
         clickedPause = false;
+    }
+
+    public boolean isCanceled() {
+        return status == Status.CANCELED;
     }
 
     public boolean isFinished() {
