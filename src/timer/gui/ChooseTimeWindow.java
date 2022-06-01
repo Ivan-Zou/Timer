@@ -13,9 +13,9 @@ import java.awt.BorderLayout;
 public class ChooseTimeWindow extends JFrame {
     public ChooseTimeWindow() {
 
-        Integer[] hourOptions = new Integer[24];
-        Integer[] minuteOptions = new Integer[60];
-        Integer[] secondOptions = new Integer[60];
+        final Integer[] hourOptions = new Integer[24];
+        final Integer[] minuteOptions = new Integer[60];
+        final Integer[] secondOptions = new Integer[60];
         for (int i = 0; i < secondOptions.length; i++) {
             if (i < 24) {
                 hourOptions[i] = i;
@@ -24,13 +24,13 @@ public class ChooseTimeWindow extends JFrame {
             secondOptions[i] = i;
         }
 
-        JPanel timePanel = new JPanel();
-        JLabel hourLabel = new JLabel(" Hour(s): ");
-        JComboBox<Integer> hourList = new JComboBox<>(hourOptions);
-        JLabel minuteLabel = new JLabel(" Minute(s): ");
-        JComboBox<Integer> minuteList = new JComboBox<>(minuteOptions);
-        JLabel secondLabel = new JLabel(" Second(s): ");
-        JComboBox<Integer> secondList = new JComboBox<>(secondOptions);
+        final JPanel timePanel = new JPanel();
+        final JLabel hourLabel = new JLabel(" Hour(s): ");
+        final JComboBox<Integer> hourList = new JComboBox<>(hourOptions);
+        final JLabel minuteLabel = new JLabel(" Minute(s): ");
+        final JComboBox<Integer> minuteList = new JComboBox<>(minuteOptions);
+        final JLabel secondLabel = new JLabel(" Second(s): ");
+        final JComboBox<Integer> secondList = new JComboBox<>(secondOptions);
 
         hourList.setFocusable(false);
         minuteList.setFocusable(false);
@@ -45,9 +45,9 @@ public class ChooseTimeWindow extends JFrame {
 
         add(timePanel, BorderLayout.NORTH);
 
-        JPanel buttonPanel = new JPanel();
+        final JPanel buttonPanel = new JPanel();
         // OK Button
-        JButton ok = new JButton("OK");
+        final JButton ok = new JButton("OK");
         ok.setFocusable(false);
         ok.addActionListener(actionEvent -> {
             Integer selectedHours = (Integer) hourList.getSelectedItem();

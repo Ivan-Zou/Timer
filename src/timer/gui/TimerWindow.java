@@ -19,20 +19,20 @@ public class TimerWindow extends JFrame {
         setLocation(Constants.WINDOW_LOCATION_X, Constants.WINDOW_LOCATION_Y);
         setPreferredSize(new Dimension(Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT));
 
-        JPanel timePanel = new JPanel();
-        JLabel time = new JLabel("00:00:00");
+        final JPanel timePanel = new JPanel();
+        final JLabel time = new JLabel("00:00:00");
         time.setFont(new Font(null, Font.PLAIN, Constants.TIME_FONT_SIZE));
 
         timePanel.add(time);
 
         add(timePanel, BorderLayout.CENTER);
 
-        JPanel controlPanel = new JPanel();
-        JButton chooseTime = new JButton();
-        JButton startPauseResume = new JButton();
-        JButton cancel = new JButton();
+        final JPanel controlPanel = new JPanel();
+        final JButton chooseTime = new JButton();
+        final JButton startPauseResume = new JButton();
+        final JButton cancel = new JButton();
 
-        TimerMechanics timer = new TimerMechanics(time, chooseTime, startPauseResume, cancel);
+        final TimerMechanics timer = new TimerMechanics(time, chooseTime, startPauseResume, cancel);
         timer.setTime(hours, minutes, seconds);
         timer.setButtonText();
 
