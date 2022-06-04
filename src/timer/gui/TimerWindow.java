@@ -15,10 +15,6 @@ import java.awt.Font;
 
 public class TimerWindow extends JFrame {
     public TimerWindow(int hours, int minutes, int seconds) {
-        setTitle("Timer");
-        setLocation(Constants.WINDOW_LOCATION_X, Constants.WINDOW_LOCATION_Y);
-        setPreferredSize(new Dimension(Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT));
-
         final JPanel timePanel = new JPanel();
         final JLabel time = new JLabel("00:00:00");
         time.setFont(new Font(null, Font.PLAIN, Constants.TIME_FONT_SIZE));
@@ -80,7 +76,10 @@ public class TimerWindow extends JFrame {
 
         pack();
         setVisible(true);
+        setTitle("Timer");
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocation(Constants.WINDOW_LOCATION_X, Constants.WINDOW_LOCATION_Y);
+        setPreferredSize(new Dimension(Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT));
     }
 }

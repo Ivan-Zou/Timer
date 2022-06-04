@@ -12,7 +12,6 @@ import java.awt.BorderLayout;
 
 public class ChooseTimeWindow extends JFrame {
     public ChooseTimeWindow() {
-
         final Integer[] hourOptions = new Integer[24];
         final Integer[] minuteOptions = new Integer[60];
         final Integer[] secondOptions = new Integer[60];
@@ -66,12 +65,12 @@ public class ChooseTimeWindow extends JFrame {
 
         add(buttonPanel, BorderLayout.SOUTH);
 
-        setPreferredSize(new Dimension(Constants.POPUP_WIDTH, Constants.POPUP_HEIGHT));
-        setLocation(Constants.POPUP_LOCATION_X, Constants.POPUP_LOCATION_Y);
-        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        setTitle("Choose Time");
-        setResizable(false);
-        setVisible(true);
         pack();
+        setVisible(true);
+        setResizable(false);
+        setTitle("Choose Time");
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        setLocation(Constants.POPUP_LOCATION_X, Constants.POPUP_LOCATION_Y);
+        setPreferredSize(new Dimension(Constants.POPUP_WIDTH, Constants.POPUP_HEIGHT));
     }
 }
