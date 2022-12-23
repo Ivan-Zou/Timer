@@ -1,10 +1,10 @@
 package timer;
 
-import timer.gui.ChooseTimeWindow;
+import timer.gui.TimerWindow;
 
 public class RunTimer implements Runnable {
     @Override
     public void run() {
-        new ChooseTimeWindow();
+        new TimerWindow(0, 0, 0);
     }
 }
