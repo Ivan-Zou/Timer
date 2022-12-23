@@ -81,6 +81,6 @@ public class TimerWindow extends JFrame {
         setTitle("Timer");
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocation(Constants.WINDOW_LOCATION_X, Constants.WINDOW_LOCATION_Y);
+        setLocationRelativeTo(null);
     }
 }
