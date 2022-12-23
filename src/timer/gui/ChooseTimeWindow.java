@@ -72,6 +72,6 @@ public class ChooseTimeWindow extends JFrame {
         setResizable(false);
         setTitle("Choose Time");
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        setLocation(Constants.POPUP_LOCATION_X, Constants.POPUP_LOCATION_Y);
+        setLocationRelativeTo(null);
     }
 }
