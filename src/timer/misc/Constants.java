@@ -1,13 +1,9 @@
 package timer.misc;
 
 public class Constants {
-    public static final int WINDOW_LOCATION_X = 400;
-    public static final int WINDOW_LOCATION_Y = 200;
     public static final int WINDOW_WIDTH = 550;
     public static final int WINDOW_HEIGHT = 175;
 
-    public static final int POPUP_LOCATION_X = 475;
-    public static final int POPUP_LOCATION_Y = 235;
     public static final int POPUP_WIDTH = 400;
     public static final int POPUP_HEIGHT = 105;
 
